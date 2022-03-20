@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Sayt</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        body{
+            background-color: #F0F8FF;
+        }
+
+        header h1 a{
+        color: green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+            <h1 style="text-align: center"><a href="{% url 'home-url' %}">Blog sayt</a></h1>
+            <h1 style="text-align: right"><a href="{% url 'translate-url' %}">Onlayn lug'at</a></h1>
+    </header>
+
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

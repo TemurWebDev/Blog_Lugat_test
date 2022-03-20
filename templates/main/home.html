@@ -1,0 +1,12 @@
+
+    {% extends 'main/base.html' %}
+
+    {% block content %}
+
+        {% for blog in blogs %}
+            <div class="post-entry">
+                <h2><a href="{% url 'complate-url' pk=blog.id %}">{{blog.title}} | ({{blog.counter}}  <i class="fa fa-eye"></i>)</a></h2>
+                <p>{{blog.body |slice:":100"}}</p>
+            </div>
+        {% endfor %}
+    {% endblock %}
